@@ -14,7 +14,10 @@ def index():
 def post():
     fname= request.form['fname']
     lname = request.form['lname']
-
+    
+    fname=fname.upper()
+    lname=lname.upper()
+    
     matched_characters=0
 
     f_TF = [False] * len(fname)
